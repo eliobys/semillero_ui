@@ -1,0 +1,72 @@
+<div class="card-body">
+  <table class="table caption-top" [formGroup]="buscarForm">
+    <thead>
+      <tr>
+       
+        <th>Idusuario</th>
+        <th>IdHabilidad</th>
+         <th>valor del servicio</th>
+        <th>estado del servicio</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of servicios">
+        <th>{{item.idServicios}}</th>
+        <th>{{item.idHabilidad}}</th>
+        <th>{{item.valorDeServicio}}</th>
+        <th>{{item.estadoDeServicio}}</th>
+        <td>
+          <div class="btn-opciones">
+            <button type="button" class="btn btn-success" (click)="editar(item)" data-bs-toggle="modal"
+             data-bs-target="#exampleModal"><i class="fas fa-user-edit"></i>aceptar</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- Modal
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+  *ngIf="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ver detalle</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form action="" [formGroup]="actualizarForm" (ngSubmit)="actualizar()">
+          <div class="for-group">
+            <label>Idservicios</label>
+            <input type="text" formControlName="idservicios" class="form-control">
+          </div>
+
+          <div class="for-group">
+            <label>valorDeServicio</label>
+            <input id="documentos" value="" type="number" formControlName="valorDeServicio" class="form-control" readonly>
+          </div>
+
+          <div class="for-group">
+            <label>estado_de_servicio</label>
+            <input type="number" formControlName="estadoServicio" class="form-control">
+          </div>
+
+         
+
+          <div class="for-group">
+            <label>IdHabilidad</label>
+            <input type="email" formControlName="idHabilidad" class="form-control">
+          </div>
+
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success" [disabled]="serviciosForm.disabled">Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->

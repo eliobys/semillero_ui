@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-header">
+      <h1 class="title">Crear Servicio</h1>
+    </div>
+    <div class="card-body">
+      <div class="usuario-crear container">
+  
+        <form [formGroup]="tiposervicioForm">
+  
+          <div class="for-group">
+            <label>TipoHAbilidad</label>
+            <select name="tipohabilidad" id="tipohabilidad" formControlName="tipohabilidad" class="form-control">
+              <option [ngValue]="item" *ngFor="let item of tipohabilidad">{{item.nombre}}</option>
+            </select>
+          </div>
+  
+          <div class="for-group">
+            <label>Idusuario</label>
+            <input id="documentos" value="" type="number" formControlName="documento" class="form-control">
+          </div>
+          
+         <div>
+          <button type="submit" class="btn btn-primary" [disabled]="tiposervicioForm.invalid">Guardar</button>
+          </div> 
+       
+  
+         </form>
+      </div>
+    </div>
+  </div> 

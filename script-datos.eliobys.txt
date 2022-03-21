@@ -1,0 +1,17 @@
+  -- usuario
+INSERT INTO `bdwin`.`usuario` ( `idUsuario`,`idHabilidades`,`rol`,`nombre`,`apellidos`,`numerodetelefono`,`tipodecedula`,
+`cedula`,`direccion`,`correoelectronico`,`ciudadderesidencia`,`contrasena`) 
+VALUES (2,4,'cliente',"juan",mendez,4444446,'ceduladeciudadania',46853112,'calle65b#34-21','juan54@gmail.com','medellin-antioquia','55655a');
+
+INSERT INTO `bdwin`.`usuario` ( `idUsuario`,`idHabilidades`,`rol`,`nombre`,`apellidos`,`numerodetelefono`,`tipodecedula`,
+`cedula`,`direccion`,`correoelectronico`,`ciudadderesidencia`,`contrasena`) 
+VALUES (8,2,'hacedor',"pedro",'mar',77844446,'ceduladeciudadania',458631112,'calle75b#84-11','peter54@gmail.com','puertoberrio-antioquia','5henbjk5a');
+
+
+-- -- servicios
+insert into `bdwin`.`servicios` (`idservicios`,`valordeservicio`,`estadodeservicio`,`idusuario`,`idhabilidad`) values (4,350000,'activo',5,1);
+insert into `bdwin`.`servicios` (`idservicios`,`valordeservicio`,`estadodeservicio`,`idusuario`,`idhabilidad`) values (7,460000,'rechazado',3,2);
+insert into `bdwin`.`servicios` (`idservicios`,`valordeservicio`,`estadodeservicio`,`idusuario`,`idhabilidad`) values (5,150000,'inactivo',7,3);
+-- tiposdeservicios
+insert into `bdwin`.`tipodeservicios` (`idhabilidad`,`tipohabilidad`,`idusuario`) values (8,'activo',5);
+insert into `bdwin`.`tipodeservicios` (`idhabilidad`,`tipohabilidad`,`idusuario`) values (4,'inactivo',4);

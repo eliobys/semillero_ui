@@ -1,0 +1,117 @@
+<div class="card">
+  <div class="card-header">
+    <h1 class="title">Crear usuario</h1>
+  </div>
+  <div class="card-body">
+    <div class="usuario-crear container">
+      <form [formGroup]="usuarioForm" (ngSubmit)="guardar()">
+
+
+         <div class="for-group">
+          <label>rol</label>
+          <select name="usuario" id="usuario" formControlName="usuario" class="form-control">
+          <!--  <option [ngValue]="item" *ngFor="let item of usuario">{{item.usuario}}</option> -->
+          <option selected disabled [ngValue]="null" *ngFor="let item of usuario">elegir rol...</option>
+          <option [ngValue]="cliente" *ngFor="let cliente of usuario">Cliente</option>
+          <option [ngValue]="hacedor" *ngFor="let hacedor of usuario">Hacedor</option>
+
+          </select>
+        
+     
+        
+        </div>   
+        <div class="for-group">
+          <label>nombre</label>
+          <input type="text" formControlName="nombre" class="form-control" />
+        </div>
+
+        <div class="for-group">
+          <label>apellidos</label>
+          <input type="text" formControlName="apellidos" class="form-control" />
+        </div>
+
+        <div class="for-group">
+          <label>numero de telefono</label>
+          <input id="numerodetelefono" value="" type="number" formControlName="numerodetelefono" class="form-control" />
+        </div>
+
+        <div class="for-group">
+          <label>Tipo de Documento</label>
+          <input type="text"  formControlName="nombre" class="form-control" />
+        </div>
+
+        <div class="for-group">
+          <label>Cedula</label>
+          <input type="number" formControlName="cedula" class="form-control" />
+        </div>
+
+        <div class="for-group">
+          <label>Direccion</label>
+          <input type="text" formControlName="direccion" class="form-control" />
+        </div>
+
+        <div class="for-group">
+          <label>Correo electronico</label>
+          <input type="text" formControlName="correo_electronico" class="form-control" />
+        </div>
+
+        <div class="for-group">
+          <label>Ciudad de Residencia</label>
+          <input type="text" formControlName="Ciudadderesidencia" class="form-control" />
+        </div>
+
+        <div class="for-group">
+          <label>Contraseña</label>
+          <input type="text" formControlName="contrasena" class="form-control" />
+
+          <button type="submit" class="btn btn-primary" [disabled]="usuarioForm.invalid">Guardar</button>
+
+          <!-- <div class="from-btn btn-save">
+            <button type="submit" class="btn btn-primary" [disabled]="usuarioForm.invalid"><i
+                class="far fa-save"></i>save</button>
+          </div> -->
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="serviModal" tabindex="-1" aria-labelledby="serviModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="Crear Servicio" id="serviModalLabel">Crear Servicio</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="" [formGroup]="tiposervicioForm " (ngSubmit)="guardarservicio()">
+          <div class="for-group"> -->
+            <!-- <label>tipohabilidad</label>
+            <input type="text" formControlName="tipohabilidad" class="form-control"> -->
+            <!-- <div class="for-group">
+              <label>tipohabilidad</label>
+               <label>iduario</label> -->
+              <!-- <select name="tipohabilidad" id="tipohabilidad"  class="form-control">
+                <option value=""></option>
+                 <option [value]="item.idHabilidad" *ngFor="let item  of servicios">{{item.tipoHabilidad}}</option> 
+              </select>
+
+            </div>
+            <div class="for-group">
+              <label>iduario</label>
+              <input id="documentos" value="" type="number" formControlName="documento" class="form-control" readonly>
+            </div>
+
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-success" [disabled]="tiposervicioForm .disabled">Pedir Servicio</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> --> 

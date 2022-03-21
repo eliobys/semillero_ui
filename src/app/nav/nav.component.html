@@ -1,0 +1,32 @@
+
+<nav class="navbar navbar-light bg-light">
+    <div class="contenedor">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="usuario">
+                <i class="fas fa-plane-departure"></i>
+            Usuario
+            </a>
+        </div>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="tiposervicio">
+             TipoServicio
+            </a>
+        </div>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="servicio">
+              Servicio
+            </a>
+        </div>
+    </div>
+
+    <div class="passenger-head">
+        <h6>
+       
+          <select #langSelect (change)="changeLang(langSelect.value)">
+            <option *ngFor="let lang of langs" [value]="lang">
+              {{lang}}
+            </option>
+          </select>
+        </h6>
+      </div>
+</nav>
